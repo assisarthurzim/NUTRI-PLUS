@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUTRI+ | Sua Saúde em Primeiro Lugar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav-logo">NUTRI<span class="logo-plus">+</span></div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Início</a></li>
+                <li><a href="#dietas" class="nav-link">Dietas</a></li>
+                <li><a href="#receitas" class="nav-link">Receitas</a></li>
+                <li><a href="#nutricionistas" class="nav-link">Nutricionistas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content container">
+            <div class="hero-text">
+                <h1 class="hero-title">Transforme sua saúde com <span class="highlight">nutrição inteligente</span></h1>
+                <p class="hero-description">Descubra o poder de uma alimentação equilibrada. Receba planos
+                    personalizados, receitas deliciosas e orientação profissional — tudo gratuito.</p>
+                <a href="#calculadora" class="btn btn-primary">Começar Agora</a>
+            </div>
+            <div class="hero-image">
+                <img src="alimentos-saudaveis-e-equipamentos-medicos.jpg" alt="Alimentação saudável">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Por que escolher o NUTRI+?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-number">1</div>
+                    <h3>100% Gratuito</h3>
+                    <p>Acesso completo a todas as funcionalidades sem custos. Saúde não deve ter barreiras.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">2</div>
+                    <h3>Planos Personalizados</h3>
+                    <p>Dietas adaptadas ao seu perfil, considerando peso, altura, idade e objetivos.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">3</div>
+                    <h3>Receitas Práticas</h3>
+                    <p>Centenas de receitas nutritivas e saborosas para o dia a dia.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-number">4</div>
+                    <h3>Suporte Profissional</h3>
+                    <p>Conexão com nutricionistas qualificados para consultas online acessíveis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section class="calculator" id="calculadora">
+        <div class="container">
+            <div class="calculator-content">
+                <div class="calculator-info">
+                    <h2 class="section-title">Calcule seu plano alimentar</h2>
+                    <p>Preencha seus dados e receba uma dieta personalizada em segundos. Nossa calculadora considera seu
+                        IMC e necessidades calóricas diárias.</p>
+                    <div class="calculator-features">
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>Cálculo de IMC automático</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>Necessidades calóricas personalizadas</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            <span>Plano alimentar completo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-form">
+                    <form id="dietForm">
+                        <div class="form-group">
+                            <label for="peso">Peso (kg)</label>
+                            <input type="number" id="peso" name="peso" placeholder="Ex: 70" required min="30" max="300">
+                        </div>
+                        <div class="form-group">
+                            <label for="altura">Altura (cm)</label>
+                            <input type="number" id="altura" name="altura" placeholder="Ex: 170" required min="100"
+                                max="250">
+                        </div>
+                        <div class="form-group">
+                            <label for="idade">Idade</label>
+                            <input type="number" id="idade" name="idade" placeholder="Ex: 25" required min="10"
+                                max="120">
+                        </div>
+                        <div class="form-group">
+                            <label for="sexo">Sexo</label>
+                            <select id="sexo" name="sexo" required>
+                                <option value="">Selecione</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="feminino">Feminino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="atividade">Nível de Atividade</label>
+                            <select id="atividade" name="atividade" required>
+                                <option value="">Selecione</option>
+                                <option value="sedentario">Sedentário</option>
+                                <option value="leve">Levemente ativo</option>
+                                <option value="moderado">Moderadamente ativo</option>
+                                <option value="intenso">Muito ativo</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Gerar Minha Dieta</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Results -->
+            <div class="calculator-results" id="results" style="display: none;">
+                <div class="results-header">
+                    <h3>Seu Plano Personalizado</h3>
+                    <button class="btn-close" id="closeResults">&times;</button>
+                </div>
+                <div class="results-stats">
+                    <div class="stat-card">
+                        <span class="stat-label">IMC</span>
+                        <span class="stat-value" id="imcValue">-</span>
+                        <span class="stat-status" id="imcStatus">-</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Calorias Diárias</span>
+                        <span class="stat-value" id="caloriasValue">-</span>
+                        <span class="stat-status">kcal/dia</span>
+                    </div>
+                </div>
+                <div class="results-diet">
+                    <h4>Plano Alimentar Recomendado</h4>
+                    <div id="dietPlan"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dietas Section -->
+    <section class="dietas" id="dietas">
+        <div class="container">
+            <h2 class="section-title">Dietas por Objetivo</h2>
+            <p class="section-subtitle">Escolha o plano ideal para seu objetivo de saúde</p>
+
+            <div class="dietas-grid">
+                <div class="dieta-card">
+                    <div class="dieta-image">
+                        <img src="mulher-jovem-com-fita-metrica-em-fita-adesiva-na-cozinha.jpg" alt="Perda de peso">
+                    </div>
+                    <div class="dieta-content">
+                        <span class="dieta-tag">Emagrecimento</span>
+                        <h3>Dieta para Perda de Peso</h3>
+                        <p>Plano balanceado com déficit calórico controlado, rico em proteínas e fibras para saciedade
+                            prolongada.</p>
+                        <ul class="dieta-features">
+                            <li>1500-1800 kcal/dia</li>
+                            <li>5-6 refeições diárias</li>
+                            <li>Foco em alimentos termogênicos</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="showDietDetails('perda')">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="dieta-card">
+                    <div class="dieta-image">
+                        <img src="jovem-cavalheiro-musculoso-bombando-biceps.jpg" alt="Ganho de massa">
+                    </div>
+                    <div class="dieta-content">
+                        <span class="dieta-tag">Hipertrofia</span>
+                        <h3>Dieta para Ganho de Massa</h3>
+                        <p>Alto valor proteico e calórico para suportar crescimento muscular e recuperação pós-treino.
+                        </p>
+                        <ul class="dieta-features">
+                            <li>2500-3000 kcal/dia</li>
+                            <li>2g proteína/kg peso</li>
+                            <li>Carboidratos estratégicos</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="showDietDetails('ganho')">Ver Detalhes</button>
+                    </div>
+                </div>
+
+                <div class="dieta-card">
+                    <div class="dieta-image">
+                        <img src="prato-de-tigela-de-buda-com-legumes-e-legumes-vista-topo.jpg" alt="Manutenção">
+                    </div>
+                    <div class="dieta-content">
+                        <span class="dieta-tag">Manutenção</span>
+                        <h3>Dieta Equilibrada</h3>
+                        <p>Alimentação balanceada para manter peso saudável e garantir todos os nutrientes essenciais.
+                        </p>
+                        <ul class="dieta-features">
+                            <li>2000-2200 kcal/dia</li>
+                            <li>Macros balanceados</li>
+                            <li>Variedade alimentar</li>
+                        </ul>
+                        <button class="btn btn-secondary" onclick="showDietDetails('manutencao')">Ver Detalhes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Receitas Section -->
+    <section class="receitas" id="receitas">
+        <div class="container">
+            <h2 class="section-title">Receitas Nutritivas</h2>
+            <p class="section-subtitle">Deliciosas, saudáveis e fáceis de preparar</p>
+
+            <div class="receitas-tabs">
+                <button class="tab-btn active" data-tab="todas">Todas</button>
+                <button class="tab-btn" data-tab="cafe">Café da Manhã</button>
+                <button class="tab-btn" data-tab="almoco">Almoço</button>
+                <button class="tab-btn" data-tab="jantar">Jantar</button>
+                <button class="tab-btn" data-tab="lanches">Lanches</button>
+                <button class="tab-btn" data-tab="doces">Doces Saudáveis</button>
+            </div>
+
+            <div class="receitas-grid" id="receitasGrid">
+                <!-- Café da Manhã -->
+                <div class="receita-card" data-category="cafe">
+                    <div class="receita-image">
+                        <img src="sobremesas-naturais-saudaveis-iogurte-frutas-e-cereais.jpg" alt="Overnight Oats">
+                        <span class="receita-time">10 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Overnight Oats com Frutas Vermelhas</h3>
+                        <p>Aveia deixada de molho overnight com leite vegetal, chia e frutas vermelhas frescas.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 320 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('oats')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <div class="receita-card" data-category="cafe">
+                    <div class="receita-image">
+                        <img src="imagem-gerada-por-ai-de-banana.jpg" alt="Panquecas">
+                        <span class="receita-time">15 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Panquecas Proteicas de Banana</h3>
+                        <p>Panquecas fofas feitas com banana, ovos e aveia. Ricas em proteína e sem açúcar adicionado.
+                        </p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 280 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('panquecas')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <!-- Almoço -->
+                <div class="receita-card" data-category="almoco">
+                    <div class="receita-image">
+                        <img src="frango-grelhado-e-fatias-de-frango.jpg" alt="Frango com Quinoa">
+                        <span class="receita-time">30 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Frango Grelhado com Quinoa</h3>
+                        <p>Peito de frango temperado com ervas, quinoa e mix de vegetais assados.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 450 kcal</span>
+                            <span class="info-item">🥄 Médio</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('frango')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <div class="receita-card" data-category="almoco">
+                    <div class="receita-image">
+                        <img src="bife-de-salmao-grelhado.jpg" alt="Salmão">
+                        <span class="receita-time">25 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Salmão com Batata Doce</h3>
+                        <p>Salmão assado com crosta de ervas, batata doce rústica e brócolis no vapor.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 520 kcal</span>
+                            <span class="info-item">🥄 Médio</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('salmao')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <!-- Jantar -->
+                <div class="receita-card" data-category="jantar">
+                    <div class="receita-image">
+                        <img src="sopa-de-legumes-com-ervas-laterais.jpg" alt="Sopa">
+                        <span class="receita-time">35 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Sopa de Legumes Detox</h3>
+                        <p>Sopa cremosa com abóbora, cenoura, gengibre e cúrcuma. Perfeita para o jantar.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 180 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('sopa')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <div class="receita-card" data-category="jantar">
+                    <div class="receita-image">
+                        <img src="carne-de-file-de-salmao-grelhado-com-salada-de-legumes.jpg" alt="Peixe">
+                        <span class="receita-time">20 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Peixe Grelhado com Salada</h3>
+                        <p>Tilápia grelhada com limão e salada verde completa com molho de iogurte.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 350 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('peixe')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <!-- Lanches -->
+                <div class="receita-card" data-category="lanches">
+                    <div class="receita-image">
+                        <img src="deliciosa-comida-judaica-plana.jpg" alt="Energy Balls">
+                        <span class="receita-time">10 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Energy Balls de Tâmaras</h3>
+                        <p>Bolinhas energéticas com tâmaras, castanhas, cacau e coco. Lanche perfeito pré-treino.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 150 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('energy')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <div class="receita-card" data-category="lanches">
+                    <div class="receita-image">
+                        <img src="vista-superior-hummus-com-variedade-de-legumes.jpg" alt="Hummus">
+                        <span class="receita-time">5 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Hummus com Palitos de Vegetais</h3>
+                        <p>Pasta de grão-de-bico cremosa servida com cenoura, pepino e pimentão.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 200 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('hummus')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <!-- Doces -->
+                <div class="receita-card" data-category="doces">
+                    <div class="receita-image">
+                        <img src="sobremesa_musse_chocolate_com_abacate.webp" alt="Mousse">
+                        <span class="receita-time">10 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Mousse de Chocolate com Abacate</h3>
+                        <p>Sobremesa cremosa e saudável feita com abacate, cacau e mel. Sem açúcar refinado.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 220 kcal</span>
+                            <span class="info-item">🥄 Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('mousse')">Ver Receita</button>
+                    </div>
+                </div>
+
+                <div class="receita-card" data-category="doces">
+                    <div class="receita-image">
+                        <img src="vista-da-deliciosa-sobremesa-de-sorvete-congelado-com-bananas.jpg" alt="Nice Cream">
+                        <span class="receita-time">5 min</span>
+                    </div>
+                    <div class="receita-content">
+                        <h3>Nice Cream de Banana</h3>
+                        <p>Sorvete saudável feito apenas com banana congelada. Adicione toppings a gosto.</p>
+                        <div class="receita-info">
+                            <span class="info-item">🔥 120 kcal</span>
+                            <span class="info-item">🥄 Muito Fácil</span>
+                        </div>
+                        <button class="btn btn-outline" onclick="showRecipe('nicecream')">Ver Receita</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nutricionistas Section -->
+    <section class="nutricionistas" id="nutricionistas">
+        <div class="container">
+            <h2 class="section-title">Nutricionistas Online</h2>
+            <p class="section-subtitle">Profissionais qualificados com consultas acessíveis</p>
+
+            <div class="nutricionistas-grid">
+                <div class="nutricionista-card">
+                    <div class="nutricionista-header">
+
+                        <div class="nutricionista-badge">CRN 12345</div>
+                    </div>
+                    <div class="nutricionista-content">
+                        <h3>Dra. Ana Silva</h3>
+                        <p class="nutricionista-specialty">Especialista em Emagrecimento e Reeducação Alimentar</p>
+                        <p class="nutricionista-description">10 anos de experiência ajudando pessoas a alcançarem seus
+                            objetivos de forma saudável e sustentável.</p>
+                        <div class="nutricionista-info">
+                            <div class="info-row">
+                                <span class="info-label">Consulta:</span>
+                                <span class="info-value">R$ 80,00</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Duração:</span>
+                                <span class="info-value">60 minutos</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Avaliação:</span>
+                                <span class="info-value">⭐ 4.9 (127 avaliações)</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full" onclick="contactNutritionist('Ana Silva')">Agendar
+                            Consulta</button>
+                    </div>
+                </div>
+
+                <div class="nutricionista-card">
+                    <div class="nutricionista-header">
+                        <div class="nutricionista-badge">CRN 23456</div>
+                    </div>
+                    <div class="nutricionista-content">
+                        <h3>Dr. Carlos Mendes</h3>
+                        <p class="nutricionista-specialty">Especialista em Nutrição Esportiva e Hipertrofia</p>
+                        <p class="nutricionista-description">Auxilia atletas e praticantes de atividade física a
+                            otimizarem performance através da alimentação.</p>
+                        <div class="nutricionista-info">
+                            <div class="info-row">
+                                <span class="info-label">Consulta:</span>
+                                <span class="info-value">R$ 90,00</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Duração:</span>
+                                <span class="info-value">60 minutos</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Avaliação:</span>
+                                <span class="info-value">⭐ 4.8 (95 avaliações)</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full" onclick="contactNutritionist('Carlos Mendes')">Agendar
+                            Consulta</button>
+                    </div>
+                </div>
+
+                <div class="nutricionista-card">
+                    <div class="nutricionista-header">
+                        <div class="nutricionista-badge">CRN 34567</div>
+                    </div>
+                    <div class="nutricionista-content">
+                        <h3>Dra. Mariana Costa</h3>
+                        <p class="nutricionista-specialty">Especialista em Nutrição Clínica e Doenças Metabólicas</p>
+                        <p class="nutricionista-description">Foco em diabetes, hipertensão e outras condições que
+                            requerem cuidado nutricional especializado.</p>
+                        <div class="nutricionista-info">
+                            <div class="info-row">
+                                <span class="info-label">Consulta:</span>
+                                <span class="info-value">R$ 85,00</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Duração:</span>
+                                <span class="info-value">60 minutos</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Avaliação:</span>
+                                <span class="info-value">⭐ 5.0 (143 avaliações)</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full" onclick="contactNutritionist('Mariana Costa')">Agendar
+                            Consulta</button>
+                    </div>
+                </div>
+
+                <div class="nutricionista-card">
+                    <div class="nutricionista-header">
+                        <div class="nutricionista-badge">CRN 45678</div>
+                    </div>
+                    <div class="nutricionista-content">
+                        <h3>Dr. Roberto Lima</h3>
+                        <p class="nutricionista-specialty">Especialista em Nutrição Vegetariana e Vegana</p>
+                        <p class="nutricionista-description">Ajuda na transição e manutenção de dietas plant-based de
+                            forma equilibrada e nutritiva.</p>
+                        <div class="nutricionista-info">
+                            <div class="info-row">
+                                <span class="info-label">Consulta:</span>
+                                <span class="info-value">R$ 75,00</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Duração:</span>
+                                <span class="info-value">60 minutos</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Avaliação:</span>
+                                <span class="info-value">⭐ 4.9 (88 avaliações)</span>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-full" onclick="contactNutritionist('Roberto Lima')">Agendar
+                            Consulta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">NUTRI<span class="logo-plus">+</span></div>
+                    <p>Transformando vidas através da nutrição consciente e acessível.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navegação</h4>
+                        <ul>
+                            <li><a href="#home">Início</a></li>
+                            <li><a href="#dietas">Dietas</a></li>
+                            <li><a href="#receitas">Receitas</a></li>
+                            <li><a href="#nutricionistas">Nutricionistas</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Recursos</h4>
+                        <ul>
+                            <li><a href="#calculadora">Calculadora</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Termos de Uso</a></li>
+                            <li><a href="#">Privacidade</a></li>
+                            <li><a href="#">Cookies</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NUTRI+. Todos os direitos reservados.</p>
+                <p class="footer-disclaimer">As informações fornecidas não substituem orientação médica profissional.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
