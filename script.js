@@ -592,55 +592,6 @@ function showRecipe(recipeId) {
     openModal(content)
   }
 }
-
-// Contact Nutritionist
-function contactNutritionist(name) {
-  const content = `
-        <h2>Agendar Consulta com ${name}</h2>
-        <p>Para agendar sua consulta online, preencha o formulário abaixo e entraremos em contato em até 24 horas.</p>
-        
-        <form id="contactForm" style="margin-top: 1.5rem;">
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Nome Completo</label>
-                <input type="text" required style="width: 100%; padding: 0.75rem; border: 2px solid #e5e5e5; border-radius: 0.5rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">E-mail</label>
-                <input type="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #e5e5e5; border-radius: 0.5rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Telefone/WhatsApp</label>
-                <input type="tel" required style="width: 100%; padding: 0.75rem; border: 2px solid #e5e5e5; border-radius: 0.5rem;">
-            </div>
-            
-            <div style="margin-bottom: 1rem;">
-                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Melhor dia e horário</label>
-                <input type="text" placeholder="Ex: Segunda-feira, 14h" required style="width: 100%; padding: 0.75rem; border: 2px solid #e5e5e5; border-radius: 0.5rem;">
-            </div>
-            
-            <div style="margin-bottom: 1.5rem;">
-                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Mensagem (opcional)</label>
-                <textarea rows="4" style="width: 100%; padding: 0.75rem; border: 2px solid #e5e5e5; border-radius: 0.5rem;" placeholder="Conte um pouco sobre seus objetivos..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-full">Enviar Solicitação</button>
-        </form>
-    `
-
-  openModal(content)
-
-  // Handle form submission
-  setTimeout(() => {
-    document.getElementById("contactForm").addEventListener("submit", (e) => {
-      e.preventDefault()
-      alert("Solicitação enviada com sucesso! Entraremos em contato em breve.")
-      closeModal()
-    })
-  }, 100)
-}
-
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
